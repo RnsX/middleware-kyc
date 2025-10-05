@@ -38,6 +38,7 @@ func (mw *MiddlewareCore) EntityCheckRequest(request adapter.EntityCheckRequest)
 		fmt.Println("(check entity request) Unable to generate temporary id")
 		return
 	}
+	entity.TempId = tempId
 	result := mw.KycSystem.CheckEntity(&entity)
 
 	log.Printf("Middleware Core] Entity Check Result :: %s", result.ResultMessage)

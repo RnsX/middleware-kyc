@@ -18,5 +18,5 @@ type KycResult struct {
 type KycSystemAdapter interface {
 	CheckEntity(Entity *dto.KycEntity) KycResult
 	GetEntityById(Id uint64) *dto.KycEntity
-	SetEntityId(NewId uint64) KycResult
+	SetEntityId(NewId uint64, OldId uint64) KycResult
 }

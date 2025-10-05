@@ -21,6 +21,6 @@ func (kyc *TyronKycAdapter) GetEntityById(Id uint64) *dto.KycEntity {
 	return nil
 }
 
-func (kyc *TyronKycAdapter) SetEntityId(NewId uint64) KycResult {
+func (kyc *TyronKycAdapter) SetEntityId(NewId uint64, OldId uint64) KycResult {
 	return KycResult{Status: SUCCESS, ResultMessage: "Successfully updated id"}
 }
